@@ -1,0 +1,7 @@
+{
+	"contributes": {
+		"markdown.styles": [
+			"./style.css"
+		]
+	}
+}

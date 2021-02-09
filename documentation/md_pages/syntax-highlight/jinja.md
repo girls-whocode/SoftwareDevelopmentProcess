@@ -1,0 +1,26 @@
+{% include 'header.html' ignore missing with context %}
+{% include 'subheader.html' without context %}
+
+<ul>
+{% for href, caption in [('index.html', 'Index'), ('about.html', 'About')] %}
+  <li><a href="{{ href }}">{{ caption }}</a></li>
+{% endfor %}
+</ul>
+
+{% set navigation = [('index.html', 'Index'), ('about.html', 'About')] %}
+{% set key, value = call_something() %}
+
+{# A comment #}
+
+Hello {{ user.name|capitalize }} !
+
+{% if user.admin is true %}
+  <span>You're an admin !</span>
+{% else %}
+  <span>You're a normal user.</span>
+{% endif %}
+
+{# A comment on multiple lines
+   to hide a piece of code or whatever #}
+
+{% include 'footer.html' %}
